@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">numAkinator2</string>
+    <string name="timer">timer.start</string>
 </resources>

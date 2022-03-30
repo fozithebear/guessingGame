@@ -5,7 +5,10 @@ import java.util.concurrent.TimeUnit;
 public class Timer {
     private static long minutes;
 
-    public void start() throws InterruptedException {
+    public Timer() {
+    }
+
+    public String start() throws InterruptedException {
 
         long startTime = System.currentTimeMillis();
 

@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/test1"
         android:layout_width="142dp"
         android:layout_height="29dp"
         android:text="Guesses left:"
@@ -56,15 +56,15 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/timebox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Timer: 00:00"
+        android:text="@string/timer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/test1"
         app:layout_constraintVertical_bias="0.24000001" />
 
     <EditText
@@ -72,13 +72,13 @@
         android:layout_width="99dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="Guess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
         android:id="@+id/textView6"
