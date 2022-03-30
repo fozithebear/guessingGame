@@ -12,12 +12,16 @@ public class StartScreen extends AppCompatActivity {
     Button nextActivity;
     Button prevActivity;
     EditText name;
+    EditText guesses;
+    EditText interval;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
+        guesses = (EditText) findViewById(R.id.maxGuesses);
+        interval = (EditText) findViewById(R.id.maxInterval);
         name = (EditText) findViewById(R.id.playerName);
         nextActivity = (Button) findViewById(R.id.startGame);
         prevActivity = (Button) findViewById(R.id.backButton);
