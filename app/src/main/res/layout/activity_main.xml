@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="241dp"
         android:layout_height="373dp"
-        android:background="#0CEFA7"
+        android:background="#FF22FF"
         android:lineSpacingExtra="14sp"
         android:text="This game is called Number Akinator. You will guess a number within an interval of your choosing with a set amount of tries that can be chosen by you. Exceptions will be located in the paranthesis."
         android:textAlignment="center"
