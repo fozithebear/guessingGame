@@ -46,8 +46,8 @@ public class GameOn extends AppCompatActivity {
         if(useInterval >= 1000){
             useInterval = 1000;
         }
-        if(useGuesses >= 20){
-            useGuesses = 20;
+        if(useGuesses >= 10){
+            useGuesses = 10;
         }
         Random r = new Random();
         number = r.nextInt(useInterval+1);
@@ -82,6 +82,7 @@ public class GameOn extends AppCompatActivity {
             hilo = "Guess too low.";
         } else {
             Intent intent = new Intent(GameOn.this, YouWin.class);
+            startActivity(intent);
         }
 
         useGuesses--;

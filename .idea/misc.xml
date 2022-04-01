@@ -3,14 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_game_on.xml" value="0.536" />
+        <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_game_on.xml" value="0.4" />
         <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_start_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_you_lose.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/aryan/AndroidStudioProjects/guessingGame/app/src/main/res/layout/activity_you_win.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_game_on.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.38958333333333334" />
-        <entry key="app/src/main/res/layout/activity_you_lose.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/activity_you_win.xml" value="0.4036458333333333" />
       </map>
     </option>
   </component>

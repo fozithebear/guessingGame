@@ -46,16 +46,15 @@
 
     <EditText
         android:id="@+id/currentGuess"
-        android:layout_width="74dp"
-        android:layout_height="33dp"
+        android:layout_width="91dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.564" />
 
     <TextView
         android:id="@+id/textView6"
@@ -112,7 +111,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.502" />
 
     <Button
         android:id="@+id/guessSubmit"
