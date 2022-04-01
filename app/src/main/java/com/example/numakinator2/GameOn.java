@@ -22,7 +22,7 @@ public class GameOn extends AppCompatActivity {
     String useName;
     int useInterval;
     int useGuesses;
-
+    int test;
 
 
     @Override
@@ -49,7 +49,6 @@ public class GameOn extends AppCompatActivity {
             useGuesses = 20;
         }
 
-
         String strInterval = "Chosen Interval: 0 to " + Integer.toString(useInterval);
         String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
         String displayName = "Name: " + useName;
@@ -68,8 +67,6 @@ public class GameOn extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
     }
     public void buttonClicked(View v){
