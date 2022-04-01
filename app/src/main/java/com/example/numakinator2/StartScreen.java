@@ -4,24 +4,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
 
 public class StartScreen extends AppCompatActivity {
 
     Button nextActivity;
     Button prevActivity;
-    EditText name;
-    EditText guesses;
-    EditText interval;
-    TextView mssg;
+    public EditText name;
+    public EditText guesses;
+    public EditText interval;
+    public EditText mssg;
+    String message;
     String sendName;
     int sendGuesses;
     int sendInterval;
-    String message;
 
 
 
@@ -30,7 +27,8 @@ public class StartScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
-        mssg = findViewById(R.id.errorMssg);
+
+        mssg = (EditText) findViewById(R.id.errorMssg);
         guesses = (EditText) findViewById(R.id.maxGuesses);
         interval = (EditText) findViewById(R.id.maxInterval);
         name = (EditText) findViewById(R.id.playerName);
@@ -45,7 +43,7 @@ public class StartScreen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, GameOn.class);
 
-                if(guesses.getText().toString().isEmpty()|| interval.getText().toString().isEmpty()|| name.getText().toString().isEmpty()){
+                if(guesses.getText().length()==0|| interval.getText().length()==0|| name.getText().length()==0){
                     mssg.setText(message);
                 }
                 else{
@@ -61,7 +59,6 @@ public class StartScreen extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-
             }
         });
 
