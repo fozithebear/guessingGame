@@ -18,10 +18,13 @@ public class GameOn extends AppCompatActivity {
     TextView interval;
     TextView guessesLeft;
     TextView highOrlow;
+    TextView lastGuesses;
     String useName;
     int useInterval;
     int useGuesses;
     int number;
+    int counter;
+    String HorL;
     String hilo;
 
 
@@ -30,13 +33,16 @@ public class GameOn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_on);
 
+
         prevActivity = findViewById(R.id.exitButton);
         submitGuess = findViewById(R.id.guessSubmit);
+        counter = 0;
 
         name = findViewById(R.id.showName);
         interval = findViewById(R.id.showInterval);
         guessesLeft = findViewById(R.id.guessesLeft);
         highOrlow = findViewById(R.id.hiorlowting);
+        lastGuesses = findViewById(R.id.prevGuess);
 
         useName = getIntent().getExtras().getString("Name");
         useInterval = getIntent().getExtras().getInt("Interval");
@@ -77,8 +83,10 @@ public class GameOn extends AppCompatActivity {
         String test = currentGuess.getText().toString();
         int inputGuess = Integer.parseInt(test);
         if(inputGuess>number){
+            HorL = "H";
             hilo = "Guess too high.";
         } else if(inputGuess<number){
+            HorL = "L";
             hilo = "Guess too low.";
         } else {
             Intent intent = new Intent(GameOn.this, YouWin.class);
@@ -94,6 +102,7 @@ public class GameOn extends AppCompatActivity {
             Intent intent = new Intent(GameOn.this, YouLose.class);
             startActivity(intent);
         }
+
 
 
         
