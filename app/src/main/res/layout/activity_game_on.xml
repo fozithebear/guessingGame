@@ -7,7 +7,7 @@
     tools:context=".GameOn">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/hiorlowting"
         android:layout_width="149dp"
         android:layout_height="30dp"
         android:text="Guess too high/low"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/hiorlowting"
         app:layout_constraintVertical_bias="0.06999999" />
 
     <TextView
@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.24000001" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/currentGuess"
         android:layout_width="74dp"
         android:layout_height="33dp"
         android:ems="10"
@@ -140,8 +140,8 @@
         android:id="@+id/guessSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit Guess"
         android:onClick="buttonClicked"
+        android:text="Submit Guess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

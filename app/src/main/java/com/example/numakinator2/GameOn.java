@@ -5,10 +5,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GameOn extends AppCompatActivity {
@@ -19,10 +18,12 @@ public class GameOn extends AppCompatActivity {
     TextView interval;
     TextView guesses;
     TextView guessesLeft;
+    TextView highOrlow;
     String useName;
     int useInterval;
     int useGuesses;
-    int test;
+    int number;
+    String hilo;
 
 
     @Override
@@ -37,6 +38,7 @@ public class GameOn extends AppCompatActivity {
         interval = findViewById(R.id.showInterval);
         guesses = findViewById(R.id.showGuesses);
         guessesLeft = findViewById(R.id.guessesLeft);
+        highOrlow = findViewById(R.id.hiorlowting);
 
         useName = getIntent().getExtras().getString("Name");
         useInterval = getIntent().getExtras().getInt("Interval");
@@ -48,6 +50,9 @@ public class GameOn extends AppCompatActivity {
         if(useGuesses >= 20){
             useGuesses = 20;
         }
+        Random r = new Random();
+        number = r.nextInt(useInterval+1);
+
 
         String strInterval = "Chosen Interval: 0 to " + Integer.toString(useInterval);
         String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
@@ -70,66 +75,86 @@ public class GameOn extends AppCompatActivity {
 
     }
     public void buttonClicked(View v){
+        EditText currentGuess = findViewById(R.id.currentGuess);
+        int inputGuess = Integer.parseInt(currentGuess.getText().toString());
+        if(inputGuess>number){
+            hilo = "Guess too high.";
+
+        }
+        else if(inputGuess<number){
+            hilo = "Guess too low.";
+        }
+//        else{
+//
+//        }
+        useGuesses--;
+        highOrlow.setText(hilo);
+        String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
+        guessesLeft.setText(strGuesses);
+
+
+        
 
     }
-    public class Player{
-        private String name;
-        private int interval;
-        private int guesses;
-
-        public Player(String name, int interval, int guesses) {
-            this.name = name;
-            this.interval = interval + 1;
-            this.guesses = guesses;
-        }
-
-        public Player(String name) {
-            this.name = name;
-            this.interval = 101;
-            this.guesses = 10;
-        }
-
-
-        public String getName() {
-            return name;
-
-        }
-
-        public int getInterval() {
-            return interval;
-        }
-
-        public int getGuesses() {
-            return guesses;
-        }
-
-        private int getRandomNumber(){
-            return (int) (Math.random() * (interval));
-        }
-
-        public void startGame() {
-            HashMap<String, Integer> history = new HashMap<String, Integer>();
-            Scanner scanner = new Scanner(System.in);
-            int num = getRandomNumber();
-
-            String low = "L";
-            String high = "H";
-            for (int i = 0; i < guesses; i++) {
-                int guess = scanner.nextInt();
-                if (guess < num) {
-                    history.put(low, guess);
-                } else if (guess > num) {
-                    history.put(high, guess);
-                }
-
-                for (String key : history.keySet()) {
-                    String values = history.values().toString();
-                    System.out.println(key + " " + values);
-                }
-            }
-        }
-
-    }
+//
+//    public class Player{
+//        private String name;
+//        private int interval;
+//        private int guesses;
+//
+//        public Player(String name, int interval, int guesses) {
+//            this.name = name;
+//            this.interval = interval + 1;
+//            this.guesses = guesses;
+//        }
+//
+//        public Player(String name) {
+//            this.name = name;
+//            this.interval = 101;
+//            this.guesses = 10;
+//        }
+//
+//
+//        public String getName() {
+//            return name;
+//
+//        }
+//
+//        public int getInterval() {
+//            return interval;
+//        }
+//
+//        public int getGuesses() {
+//            return guesses;
+//        }
+//
+//        private int getRandomNumber(){
+//            return (int) (Math.random() * (interval));
+//        }
+//
+//        public void startGame() {
+//            HashMap<String, Integer> history = new HashMap<String, Integer>();
+//            Scanner scanner = new Scanner(System.in);
+//            int num = getRandomNumber();
+//
+//            String low = "L";
+//            String high = "H";
+//            for (int i = 0; i < guesses; i++) {
+//                int guess = scanner.nextInt();
+//                if (guess < num) {
+//                    history.put(low, guess);
+//                } else if (guess > num) {
+//                    history.put(high, guess);
+//                }
+//
+//                for (String key : history.keySet()) {
+//                    String values = history.values().toString();
+//                    System.out.println(key + " " + values);
+//                }
+//            }
+//        }
+//
+//    }
 
 }
 
