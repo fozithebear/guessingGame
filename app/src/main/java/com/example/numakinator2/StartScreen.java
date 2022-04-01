@@ -14,6 +14,7 @@ public class StartScreen extends AppCompatActivity {
     public EditText name;
     public EditText guesses;
     public EditText interval;
+    public EditText mssg;
     String sendName;
     int sendGuesses;
     int sendInterval;
@@ -25,6 +26,7 @@ public class StartScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
+        mssg = (EditText) findViewById(R.id.errorMssg);
         guesses = (EditText) findViewById(R.id.maxGuesses);
         interval = (EditText) findViewById(R.id.maxInterval);
         name = (EditText) findViewById(R.id.playerName);
@@ -41,12 +43,18 @@ public class StartScreen extends AppCompatActivity {
                 sendGuesses = Integer.parseInt(guesses.getText().toString());
                 sendInterval = Integer.parseInt(interval.getText().toString());
 
+
                 intent.putExtra("Name", sendName);
                 intent.putExtra("Guesses",sendGuesses);
                 intent.putExtra("Interval", sendInterval);
 
-                startActivity(intent);
-                finish();
+                if(guesses.getText().length()==0|| interval.getText().length()==0|| name.getText().length()==0){
+                    mssg.setText("Please enter all required fields.");
+                }
+                else{
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 

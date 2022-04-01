@@ -42,6 +42,7 @@ public class GameOn extends AppCompatActivity {
         useInterval = getIntent().getExtras().getInt("Interval");
         useGuesses = getIntent().getExtras().getInt("Guesses");
 
+
         if(useInterval >= 1000){
             useInterval = 1000;
         }
