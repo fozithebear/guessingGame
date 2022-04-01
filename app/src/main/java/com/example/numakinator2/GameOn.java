@@ -10,13 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameOn extends AppCompatActivity {
 
     Button prevActivity;
+    Button submitGuess;
     TextView name;
     TextView interval;
     TextView guesses;
     String useName;
     int useInterval;
     int useGuesses;
-    int test;
+
 
 
     @Override
@@ -24,7 +25,8 @@ public class GameOn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_on);
 
-        prevActivity = (Button) findViewById(R.id.exitButton);
+        prevActivity = findViewById(R.id.exitButton);
+        submitGuess = findViewById(R.id.guessSubmit);
 
         name = findViewById(R.id.showName);
         interval = findViewById(R.id.showInterval);
@@ -33,6 +35,13 @@ public class GameOn extends AppCompatActivity {
         useName = getIntent().getExtras().getString("Name");
         useInterval = getIntent().getExtras().getInt("Interval");
         useGuesses = getIntent().getExtras().getInt("Guesses");
+
+        if(useInterval >= 1000){
+            useInterval = 1000;
+        }
+        if(useGuesses >= 20){
+            useGuesses = 20;
+        }
 
         String strInterval = "Chosen Interval: 0 to " + Integer.toString(useInterval);
         String strGuesses = "Starting Guesses: " + Integer.toString(useGuesses);
