@@ -14,9 +14,10 @@ public class StartScreen extends AppCompatActivity {
     public EditText name;
     public EditText guesses;
     public EditText interval;
-    private static String finalName;
-    private static int finalGuesses;
-    private static int finalInterval;
+    String sendName;
+    int sendGuesses;
+    int sendInterval;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +25,9 @@ public class StartScreen extends AppCompatActivity {
         setContentView(R.layout.activity_start_screen);
 
         guesses = (EditText) findViewById(R.id.maxGuesses);
-        finalGuesses = Integer.parseInt(guesses.getText().toString());
         interval = (EditText) findViewById(R.id.maxInterval);
-        finalInterval = Integer.parseInt(interval.getText().toString());
         name = (EditText) findViewById(R.id.playerName);
-        finalName = name.getText().toString();
+
         nextActivity = (Button) findViewById(R.id.startGame);
         prevActivity = (Button) findViewById(R.id.backButton);
 
@@ -36,7 +35,17 @@ public class StartScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, GameOn.class);
+
+                sendName = name.getText().toString();
+                sendGuesses = Integer.parseInt(guesses.getText().toString());
+                sendInterval = Integer.parseInt(interval.getText().toString());
+
+                intent.putExtra("Name", sendName);
+                intent.putExtra("Guesses",sendGuesses);
+                intent.putExtra("Interval", sendInterval);
+
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -49,19 +58,5 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
-    }
-
-    public static String getName() {
-        return finalName;
-    }
-
-    public static int getGuesses() {
-        //String value = guesses.getText().toString();
-        return finalGuesses;
-    }
-
-    public static int getInterval() {
-        //String value = interval.getText().toString();
-        return finalInterval;
     }
 }

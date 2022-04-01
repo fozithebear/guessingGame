@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.04000002" />
 
     <EditText
-        android:id="@+id/maxInterval"
+        android:id="@+id/maxGuesses"
         android:layout_width="227dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.04000002" />
 
     <EditText
-        android:id="@+id/maxGuesses"
+        android:id="@+id/maxInterval"
         android:layout_width="294dp"
         android:layout_height="60dp"
         android:ems="10"
@@ -54,9 +54,10 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/startGame"
@@ -66,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maxInterval"
+        app:layout_constraintTop_toBottomOf="@+id/maxGuesses"
         app:layout_constraintVertical_bias="0.16000003" />
 
     <Button
@@ -118,7 +119,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maxGuesses"
+        app:layout_constraintTop_toBottomOf="@+id/maxInterval"
         app:layout_constraintVertical_bias="0.01999998" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

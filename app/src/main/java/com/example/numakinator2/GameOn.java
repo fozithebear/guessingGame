@@ -11,26 +11,36 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameOn extends AppCompatActivity {
 
     Button prevActivity;
-    TextView timer;
-    String currentName;
-    int currentGuesses;
-    int currentInterval;
+    TextView name;
+    TextView interval;
+    TextView guesses;
+    String useName;
+    int useInterval;
+    int useGuesses;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_on);
-        Timer t = new Timer();
+
         prevActivity = (Button) findViewById(R.id.exitButton);
-        timer = (TextView) findViewById(R.id.test1);
-        timer.setText(StartScreen.getName());
 
-        currentName = StartScreen.getName();
-        currentGuesses = StartScreen.getGuesses();
-        currentInterval = StartScreen.getInterval();
+        name = findViewById(R.id.showName);
+        interval = findViewById(R.id.showInterval);
+        guesses = findViewById(R.id.showGuesses);
 
+        useName = getIntent().getExtras().getString("Name");
+        useInterval = getIntent().getExtras().getInt("Interval");
+        useGuesses = getIntent().getExtras().getInt("Guesses");
 
+        String strInterval = "Chosen Interval: 0 to " + Integer.toString(useInterval);
+        String strGuesses = "Starting Guesses: " + Integer.toString(useGuesses);
+        String displayName = "Name: " + useName;
+
+        name.setText(displayName);
+        interval.setText(strInterval);
+        guesses.setText(strGuesses);
 
         prevActivity.setOnClickListener(new View.OnClickListener() {
             @Override
