@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/test1"
@@ -39,10 +39,10 @@
         android:text="Last Guesses:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/timebox"
@@ -58,16 +58,16 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="74dp"
-        android:layout_height="33dp"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
+        android:text="Guess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
         android:id="@+id/textView6"
@@ -123,29 +123,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showInterval"
         app:layout_constraintVertical_bias="0.01" />
-
-    <TextView
-        android:id="@+id/guessnotify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter your guess:"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
-
-    <Button
-        android:id="@+id/guessSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit Guess"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

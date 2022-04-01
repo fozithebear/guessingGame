@@ -43,6 +43,7 @@ public class GameOn extends AppCompatActivity {
             useGuesses = 20;
         }
 
+
         String strInterval = "Chosen Interval: 0 to " + Integer.toString(useInterval);
         String strGuesses = "Starting Guesses: " + Integer.toString(useGuesses);
         String displayName = "Name: " + useName;
