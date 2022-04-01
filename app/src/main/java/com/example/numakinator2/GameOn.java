@@ -81,7 +81,7 @@ public class GameOn extends AppCompatActivity {
         } else if(inputGuess<number){
             hilo = "Guess too low.";
         } else {
-            hilo = "You win!";
+            Intent intent = new Intent(GameOn.this, YouWin.class);
         }
 
         useGuesses--;

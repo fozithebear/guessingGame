@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumAkinator2">
         <activity
+            android:name=".YouWin"
+            android:exported="false" />
+        <activity
             android:name=".YouLose"
             android:exported="false" />
         <activity

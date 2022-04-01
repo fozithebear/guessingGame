@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +15,7 @@ public class StartScreen extends AppCompatActivity {
     public EditText name;
     public EditText guesses;
     public EditText interval;
-    public EditText mssg;
+    public TextView mssg;
     String message;
     String sendName;
     int sendGuesses;
@@ -28,7 +29,7 @@ public class StartScreen extends AppCompatActivity {
         setContentView(R.layout.activity_start_screen);
 
 
-        mssg = (EditText) findViewById(R.id.errorMssg);
+        mssg = findViewById(R.id.errorMssg);
         guesses = (EditText) findViewById(R.id.maxGuesses);
         interval = (EditText) findViewById(R.id.maxInterval);
         name = (EditText) findViewById(R.id.playerName);
@@ -43,7 +44,7 @@ public class StartScreen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen.this, GameOn.class);
 
-                if(guesses.getText().length()==0|| interval.getText().length()==0|| name.getText().length()==0){
+                if(guesses.getText().toString().isEmpty()|| interval.getText().toString().isEmpty()|| name.getText().toString().isEmpty()){
                     mssg.setText(message);
                 }
                 else{
