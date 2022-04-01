@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="149dp"
         android:layout_height="30dp"
-        android:text="Guess too high/low"
+        android:text="Guess too high/lows"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

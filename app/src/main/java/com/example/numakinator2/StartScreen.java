@@ -17,6 +17,7 @@ public class StartScreen extends AppCompatActivity {
     String sendName;
     int sendGuesses;
     int sendInterval;
+    int test;
 
 
     @Override

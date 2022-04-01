@@ -3,7 +3,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +16,7 @@ public class GameOn extends AppCompatActivity {
     String useName;
     int useInterval;
     int useGuesses;
+    int test;
 
 
     @Override
