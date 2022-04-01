@@ -74,7 +74,8 @@ public class GameOn extends AppCompatActivity {
     }
     public void buttonClicked(View v){
         EditText currentGuess = findViewById(R.id.currentGuess);
-        int inputGuess = Integer.parseInt(currentGuess.getText().toString());
+        String test = currentGuess.getText().toString();
+        int inputGuess = Integer.parseInt(test);
         if(inputGuess>number){
             hilo = "Guess too high.";
         } else if(inputGuess<number){
