@@ -5,12 +5,13 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange"
     tools:context=".StartScreen">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="244dp"
-        android:layout_height="255dp"
+        android:layout_width="223dp"
+        android:layout_height="214dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -30,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/askName"
         app:layout_constraintVertical_bias="0.04000002" />
 
     <EditText
@@ -38,14 +39,14 @@
         android:layout_width="227dp"
         android:layout_height="46dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textAlignment="center"
-        android:textSize="12sp"
-        android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/askGuesses"
         app:layout_constraintVertical_bias="0.04000002" />
 
     <EditText
@@ -53,14 +54,15 @@
         android:layout_width="294dp"
         android:layout_height="60dp"
         android:ems="10"
-        android:inputType="number"
-        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/askInteval"
         app:layout_constraintVertical_bias="0.03" />
 
     <Button
@@ -86,10 +88,10 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/askInteval"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose your maximum interval (1000 max)"
+        android:text="Choose your interval, (from 0 to your choice, 1000 max)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +99,7 @@
         app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/askName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please enter your name "
@@ -108,7 +110,7 @@
         app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/askGuesses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choose the amount of guesses you have. (10 max)"

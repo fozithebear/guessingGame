@@ -11,16 +11,24 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class YouWin extends AppCompatActivity {
-    Button playagain;
+    Button playAgain;
+    TextView youWin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_win);
 
-        playagain = findViewById(R.id.playAgain);
+        playAgain = findViewById(R.id.playAgain);
+        youWin = findViewById(R.id.youWin);
 
-        playagain.setOnClickListener(new View.OnClickListener() {
+
+        youWin.setTextColor(getResources().getColor(R.color.black));
+
+        playAgain.setTextColor(getResources().getColor(R.color.black));
+        playAgain.setBackgroundColor(getResources().getColor(R.color.white));
+
+        playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(YouWin.this, StartScreen.class);

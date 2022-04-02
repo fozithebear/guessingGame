@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/red"
     tools:context=".YouLose">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="293dp"
-        android:layout_height="133dp"
+        android:id="@+id/youLose"
+        android:layout_width="311dp"
+        android:layout_height="145dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="YOU LOSE!"
         android:textSize="60sp"
@@ -17,28 +19,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <Button
         android:id="@+id/playAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:text="Play Again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.492" />
+        app:layout_constraintTop_toBottomOf="@+id/youLose"
+        app:layout_constraintVertical_bias="0.811" />
 
     <TextView
         android:id="@+id/showAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="71dp"
+        android:fontFamily="sans-serif-black"
         android:text="Answer"
+        android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
+        app:layout_constraintVertical_bias="0.643" />
 </androidx.constraintlayout.widget.ConstraintLayout>

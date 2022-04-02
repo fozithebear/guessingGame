@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="241dp"
-        android:layout_height="373dp"
-        android:background="#FF22FF"
-        android:lineSpacingExtra="14sp"
-        android:text="This game is called Number Akinator. You will guess a number within an interval of your choosing with a set amount of tries that can be chosen by you. Exceptions will be located in the paranthesis."
+        android:id="@+id/descriptionOne"
+        android:layout_width="215dp"
+        android:layout_height="123dp"
         android:gravity="center"
+        android:lineSpacingExtra="14sp"
+        android:rotationX="8"
+        android:text="Guess a number! Choose your guesses AND number interval!"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.646" />
 
     <Button
         android:id="@+id/startScreen"
@@ -29,6 +30,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.41000003" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="424dp"
+        android:layout_height="172dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Number Akinator"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
 </androidx.constraintlayout.widget.ConstraintLayout>

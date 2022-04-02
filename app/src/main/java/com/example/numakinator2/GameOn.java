@@ -39,7 +39,15 @@ public class GameOn extends AppCompatActivity {
 
 
         prevActivity = findViewById(R.id.exitButton);
+
+        prevActivity.setTextColor(getResources().getColor(R.color.black));
+        prevActivity.setBackgroundColor(getResources().getColor(R.color.white));
+
         submitGuess = findViewById(R.id.guessSubmit);
+
+        submitGuess.setTextColor(getResources().getColor(R.color.black));
+        submitGuess.setBackgroundColor(getResources().getColor(R.color.white));
+
         counter = 0;
 
         name = findViewById(R.id.showName);
@@ -47,6 +55,13 @@ public class GameOn extends AppCompatActivity {
         guessesLeft = findViewById(R.id.guessesLeft);
         highOrlow = findViewById(R.id.hiorlowting);
         pastGuesses = findViewById(R.id.pastGuesses);
+
+        name.setTextColor(getResources().getColor(R.color.black));
+        interval.setTextColor(getResources().getColor(R.color.black));
+        guessesLeft.setTextColor(getResources().getColor(R.color.red));
+        highOrlow.setTextColor(getResources().getColor(R.color.red));
+        pastGuesses.setTextColor(getResources().getColor(R.color.black));
+
 
 
         useName = getIntent().getExtras().getString("Name");

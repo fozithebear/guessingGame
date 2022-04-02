@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".YouLose">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/youWin"
         android:layout_width="293dp"
         android:layout_height="133dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="YOU WIN!"
         android:textSize="60sp"
@@ -23,9 +25,11 @@
         android:id="@+id/playAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:text="Play Again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/youWin"
+        app:layout_constraintVertical_bias="0.337" />
 </androidx.constraintlayout.widget.ConstraintLayout>

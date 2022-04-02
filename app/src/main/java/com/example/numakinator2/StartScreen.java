@@ -12,10 +12,14 @@ public class StartScreen extends AppCompatActivity {
 
     Button nextActivity;
     Button prevActivity;
-    public EditText name;
-    public EditText guesses;
-    public EditText interval;
-    public TextView mssg;
+    EditText name;
+    EditText guesses;
+    EditText interval;
+    TextView mssg;
+    TextView askName;
+    TextView askInterval;
+    TextView askGuesses;
+
     String message;
     String sendName;
     int sendGuesses;
@@ -30,12 +34,30 @@ public class StartScreen extends AppCompatActivity {
 
 
         mssg = findViewById(R.id.errorMssg);
-        guesses = (EditText) findViewById(R.id.maxGuesses);
-        interval = (EditText) findViewById(R.id.maxInterval);
-        name = (EditText) findViewById(R.id.playerName);
+        guesses = findViewById(R.id.maxGuesses);
+        interval = findViewById(R.id.maxInterval);
+        name = findViewById(R.id.playerName);
+        askGuesses = findViewById(R.id.askGuesses);
+        askName = findViewById(R.id.askName);
+        askInterval = findViewById(R.id.askInteval);
+
+
+        mssg.setTextColor(getResources().getColor(R.color.black));
+        askInterval.setTextColor(getResources().getColor(R.color.black));
+        askName.setTextColor(getResources().getColor(R.color.black));
+        askGuesses.setTextColor(getResources().getColor(R.color.black));
+        guesses.setTextColor(getResources().getColor(R.color.black));
+        interval.setTextColor(getResources().getColor(R.color.black));
+        name.setTextColor(getResources().getColor(R.color.black));
+
 
         nextActivity = (Button) findViewById(R.id.startGame);
         prevActivity = (Button) findViewById(R.id.backButton);
+
+        nextActivity.setTextColor(getResources().getColor(R.color.black));
+        prevActivity.setTextColor(getResources().getColor(R.color.black));
+        nextActivity.setBackgroundColor(getResources().getColor(R.color.white));
+        prevActivity.setBackgroundColor(getResources().getColor(R.color.white));
 
         message = "Please enter all required fields.";
 

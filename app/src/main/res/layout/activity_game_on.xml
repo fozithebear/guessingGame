@@ -5,6 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange"
     tools:context=".GameOn">
 
 
@@ -12,16 +13,30 @@
         android:id="@+id/guessesLeft"
         android:layout_width="142dp"
         android:layout_height="29dp"
+        android:lines="10"
+        android:maxLines="10"
         android:text="Guesses left:"
         android:textAlignment="center"
-        android:maxLines="10"
-        android:lines="10"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.103" />
+
+    <TextView
+        android:id="@+id/showInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
 
     <EditText
         android:id="@+id/currentGuess"
@@ -42,8 +57,11 @@
         android:layout_height="30dp"
         android:gravity="center"
         android:text="Guess too high/low"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.527" />
@@ -91,22 +109,9 @@
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
-
-    <TextView
-        android:id="@+id/showInterval"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Interval"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.793"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showName"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.48" />
 
     <TextView
         android:id="@+id/pastGuesses"
@@ -114,20 +119,20 @@
         android:layout_height="199dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView4"
-        android:layout_width="204dp"
-        android:layout_height="408dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="175dp"
+        android:layout_height="244dp"
+        android:layout_marginEnd="224dp"
         android:src="@drawable/akinator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.147" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
