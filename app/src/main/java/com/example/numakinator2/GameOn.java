@@ -18,8 +18,10 @@ public class GameOn extends AppCompatActivity {
     TextView interval;
     TextView guessesLeft;
     TextView highOrlow;
-    TextView lastGuesses;
+    TextView pastGuesses;
+
     String useName;
+    String message;
     int useInterval;
     int useGuesses;
     int number;
@@ -42,11 +44,14 @@ public class GameOn extends AppCompatActivity {
         interval = findViewById(R.id.showInterval);
         guessesLeft = findViewById(R.id.guessesLeft);
         highOrlow = findViewById(R.id.hiorlowting);
-        lastGuesses = findViewById(R.id.prevGuess);
+        pastGuesses = findViewById(R.id.pastGuesses);
+
 
         useName = getIntent().getExtras().getString("Name");
         useInterval = getIntent().getExtras().getInt("Interval");
         useGuesses = getIntent().getExtras().getInt("Guesses");
+
+
 
 
         if(useInterval >= 1000){
@@ -80,93 +85,43 @@ public class GameOn extends AppCompatActivity {
     }
     public void buttonClicked(View v){
         EditText currentGuess = findViewById(R.id.currentGuess);
-        String test = currentGuess.getText().toString();
-        int inputGuess = Integer.parseInt(test);
-        if(inputGuess>number){
-            HorL = "H";
-            hilo = "Guess too high.";
-        } else if(inputGuess<number){
-            HorL = "L";
-            hilo = "Guess too low.";
+        message = "Please enter a guess.";
+        if(currentGuess.getText().toString().isEmpty()){
+            highOrlow.setText(message);
         } else {
-            Intent intent = new Intent(GameOn.this, YouWin.class);
-            startActivity(intent);
+            String test = currentGuess.getText().toString();
+            int inputGuess = Integer.parseInt(test);
+
+            if(inputGuess>number){
+                HorL = "H";
+                hilo = "Guess too high.";
+            } else if(inputGuess<number){
+                HorL = "L";
+                hilo = "Guess too low.";
+            } else {
+                Intent intent = new Intent(GameOn.this, YouWin.class);
+                startActivity(intent);
+            }
+
+
+            useGuesses--;
+            highOrlow.setText(hilo);
+            String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
+            guessesLeft.setText(strGuesses);
+
+            String pastGuess =  HorL + " : " + test;
+
+            pastGuesses.setText(pastGuess);
+
+
+            if(useGuesses == 0){
+                Intent intent = new Intent(GameOn.this, YouLose.class);
+
+                intent.putExtra("Answer", number);
+                startActivity(intent);
+            }
         }
-
-        useGuesses--;
-        highOrlow.setText(hilo);
-        String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
-        guessesLeft.setText(strGuesses);
-
-        if(useGuesses == 0){
-            Intent intent = new Intent(GameOn.this, YouLose.class);
-            startActivity(intent);
-        }
-
-
-
-        
 
     }
-//
-//    public class Player{
-//        private String name;
-//        private int interval;
-//        private int guesses;
-//
-//        public Player(String name, int interval, int guesses) {
-//            this.name = name;
-//            this.interval = interval + 1;
-//            this.guesses = guesses;
-//        }
-//
-//        public Player(String name) {
-//            this.name = name;
-//            this.interval = 101;
-//            this.guesses = 10;
-//        }
-//
-//
-//        public String getName() {
-//            return name;
-//
-//        }
-//
-//        public int getInterval() {
-//            return interval;
-//        }
-//
-//        public int getGuesses() {
-//            return guesses;
-//        }
-//
-//        private int getRandomNumber(){
-//            return (int) (Math.random() * (interval));
-//        }
-//
-//        public void startGame() {
-//            HashMap<String, Integer> history = new HashMap<String, Integer>();
-//            Scanner scanner = new Scanner(System.in);
-//            int num = getRandomNumber();
-//
-//            String low = "L";
-//            String high = "H";
-//            for (int i = 0; i < guesses; i++) {
-//                int guess = scanner.nextInt();
-//                if (guess < num) {
-//                    history.put(low, guess);
-//                } else if (guess > num) {
-//                    history.put(high, guess);
-//                }
-//
-//                for (String key : history.keySet()) {
-//                    String values = history.values().toString();
-//                    System.out.println(key + " " + values);
-//                }
-//            }
-//        }
-//
-//    }
-
 }
 

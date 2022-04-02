@@ -11,16 +11,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class YouLose extends AppCompatActivity {
-    Button playagain;
+    Button playAgain;
+    int answer;
+    TextView showAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_lose);
 
-        playagain = findViewById(R.id.playAgain);
+        playAgain = findViewById(R.id.playAgain);
+        showAnswer = findViewById(R.id.showAnswer);
 
-        playagain.setOnClickListener(new View.OnClickListener() {
+
+        answer = getIntent().getExtras().getInt("Answer");
+
+        String displayAnswer = "Answer: " + answer;
+
+        showAnswer.setText(displayAnswer);
+
+        playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(YouLose.this, StartScreen.class);
