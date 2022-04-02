@@ -20,6 +20,7 @@ public class GameOn extends AppCompatActivity {
     TextView highOrlow;
     TextView pastGuesses;
 
+    String pastGuess;
     String useName;
     String message;
     int useInterval;
@@ -109,7 +110,7 @@ public class GameOn extends AppCompatActivity {
             String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
             guessesLeft.setText(strGuesses);
 
-            String pastGuess =  HorL + " : " + test;
+            pastGuess = pastGuess + HorL + " : " + test;
 
             pastGuesses.setText(pastGuess);
 
