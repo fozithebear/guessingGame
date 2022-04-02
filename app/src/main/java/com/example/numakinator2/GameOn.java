@@ -20,7 +20,7 @@ public class GameOn extends AppCompatActivity {
     TextView highOrlow;
     TextView pastGuesses;
 
-    String pastGuess;
+    String pastGuess = "";
     String useName;
     String message;
     int useInterval;
@@ -89,9 +89,17 @@ public class GameOn extends AppCompatActivity {
         message = "Please enter a guess.";
         if(currentGuess.getText().toString().isEmpty()){
             highOrlow.setText(message);
-        } else {
+        }
+        else {
             String test = currentGuess.getText().toString();
             int inputGuess = Integer.parseInt(test);
+            useGuesses--;
+            if(useGuesses == 0){
+                Intent intent = new Intent(GameOn.this, YouLose.class);
+
+                intent.putExtra("Answer", number);
+                startActivity(intent);
+            }
 
             if(inputGuess>number){
                 HorL = "H";
@@ -105,22 +113,15 @@ public class GameOn extends AppCompatActivity {
             }
 
 
-            useGuesses--;
             highOrlow.setText(hilo);
             String strGuesses = "Guesses left: " + Integer.toString(useGuesses);
             guessesLeft.setText(strGuesses);
 
-            pastGuess = pastGuess + HorL + " : " + test;
+            pastGuess = pastGuess + HorL + " : " + test + "\n";
 
             pastGuesses.setText(pastGuess);
 
 
-            if(useGuesses == 0){
-                Intent intent = new Intent(GameOn.this, YouLose.class);
-
-                intent.putExtra("Answer", number);
-                startActivity(intent);
-            }
         }
 
     }
