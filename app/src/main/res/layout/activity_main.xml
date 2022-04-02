@@ -13,13 +13,13 @@
         android:background="#FF22FF"
         android:lineSpacingExtra="14sp"
         android:text="This game is called Number Akinator. You will guess a number within an interval of your choosing with a set amount of tries that can be chosen by you. Exceptions will be located in the paranthesis."
-        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <Button
         android:id="@+id/startScreen"

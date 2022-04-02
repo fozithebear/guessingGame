@@ -28,6 +28,7 @@
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="number"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,25 +39,26 @@
         android:id="@+id/hiorlowting"
         android:layout_width="149dp"
         android:layout_height="30dp"
+        android:gravity="center"
         android:text="Guess too high/low"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.527" />
 
     <TextView
         android:id="@+id/guessnotify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter your guess:"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.585" />
 
     <Button
         android:id="@+id/guessSubmit"
@@ -88,10 +90,10 @@
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/showInterval"
@@ -100,10 +102,10 @@
         android:text="Interval"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showName"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/pastGuesses"
