@@ -71,10 +71,10 @@ public class GameOn extends AppCompatActivity {
 
 
 
-        if(useInterval >= 1000){
+        if(useInterval == 0 || useInterval >= 1000){
             useInterval = 1000;
         }
-        if(useGuesses >= 10){
+        if(useGuesses == 0 || useGuesses >= 10){
             useGuesses = 10;
         }
         Random r = new Random();
